@@ -1,5 +1,7 @@
 package br.com.brunoluz.app;
 
+import java.io.IOException;
+
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
@@ -11,8 +13,9 @@ public class Main {
 	 * main
 	 * 
 	 * @param args
+	 * @throws IOException 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		condiguraLookAndFeel();
 		initGame();
 	}
