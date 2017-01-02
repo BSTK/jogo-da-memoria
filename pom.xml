@@ -25,6 +25,18 @@
 		
 	</properties>
 	
+	<dependencies>
+		
+		<!-- JUnit Test -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.test.version}</version>
+			<scope>test</scope>
+		</dependency>
+	
+	</dependencies>
+	
 	<build>
 
 		<finalName>${artifactId}</finalName>
