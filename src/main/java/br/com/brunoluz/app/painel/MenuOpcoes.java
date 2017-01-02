@@ -1,12 +1,16 @@
 package br.com.brunoluz.app.painel;
 
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 
 public class MenuOpcoes extends JPanel {
 
@@ -29,6 +33,7 @@ public class MenuOpcoes extends JPanel {
 		configuraComponentes();
 		eventosComponentes();
 		adicionaComponentes();
+		
 	}
 	
 	
@@ -65,9 +70,14 @@ public class MenuOpcoes extends JPanel {
 	 * adicionaComponentes
 	 */
 	private void adicionaComponentes() {
+		
 		add(buttonNivelFacil);
 		add(buttonNivelMedio);
 		add(buttonNivelDificil);
+		
+		add(new JLabel(new ImageIcon(getClass().getClassLoader().getResource("icones/background/background.png")), SwingConstants.LEFT));
+		
+		
 	}
 	
 	
@@ -85,7 +95,6 @@ public class MenuOpcoes extends JPanel {
 			
 		});
 		
-		
 		buttonNivelMedio.addActionListener(new ActionListener() {
 			
 			@Override
@@ -95,7 +104,6 @@ public class MenuOpcoes extends JPanel {
 			
 		});
 
-
 		buttonNivelDificil.addActionListener(new ActionListener() {
 			
 			@Override
@@ -104,6 +112,10 @@ public class MenuOpcoes extends JPanel {
 			}
 			
 		});
+		
+		buttonNivelFacil.setCursor(new Cursor(Cursor.HAND_CURSOR));
+		buttonNivelMedio.setCursor(new Cursor(Cursor.HAND_CURSOR));
+		buttonNivelDificil.setCursor(new Cursor(Cursor.HAND_CURSOR));
 		
 	}
 	

@@ -5,6 +5,7 @@ import java.awt.Rectangle;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 
 import br.com.brunoluz.app.painel.Tabuleiro;
 
@@ -34,6 +35,11 @@ public class App extends JFrame {
 		setBounds(new Rectangle(600, 600));
 		setUndecorated(true);
 		setExtendedState(JFrame.MAXIMIZED_BOTH);
+		
+		JLabel jLabel = new JLabel(new ImageIcon(getClass().getClassLoader().getResource("icones/background/background.png")), SwingConstants.LEFT);
+
+		setContentPane(jLabel);
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
@@ -43,7 +49,6 @@ public class App extends JFrame {
 	 */
 	private void adicionaComponentes() {
 		add(new Tabuleiro());
-		add(new JLabel(new ImageIcon(getClass().getClassLoader().getResource("icones/icone-0001.png"))));
 	}
 	
 }
