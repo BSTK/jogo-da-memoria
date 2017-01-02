@@ -1,6 +1,10 @@
 package br.com.brunoluz.app;
 
+import java.awt.Rectangle;
+
 import javax.swing.JFrame;
+
+import br.com.brunoluz.app.painel.Tabuleiro;
 
 public class App extends JFrame {
 
@@ -16,9 +20,10 @@ public class App extends JFrame {
 	 */
 	public App() {
 		super("Jogo da memória");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(400, 400, 500, 500);
+		setBounds(new Rectangle(600, 600));
 		setExtendedState(JFrame.MAXIMIZED_BOTH);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		add(new Tabuleiro());
 	}
 	
 	

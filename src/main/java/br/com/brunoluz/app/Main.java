@@ -3,6 +3,7 @@ package br.com.brunoluz.app;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
+import javax.swing.UnsupportedLookAndFeelException;
 
 public class Main {
 
@@ -12,8 +13,22 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		condiguraLookAndFeel();
+		initGame();
+	}
+	
+	
+	/**
+	 * Configura o LookAndFeel para o JFrame
+	 * @throws ClassNotFoundException
+	 * @throws InstantiationException
+	 * @throws IllegalAccessException
+	 * @throws UnsupportedLookAndFeelException
+	 */
+	private static void condiguraLookAndFeel() {
+		
 		try {
-
+			
 			for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
 				if ("Windows".equals(info.getName())) {
 					javax.swing.UIManager.setLookAndFeel(info.getClassName());
@@ -21,16 +36,25 @@ public class Main {
 				}
 			}
 			
-			SwingUtilities.invokeLater(new Runnable() {
-				@Override
-				public void run() {
-					new App().setVisible(true);
-				}
-			});
-			
 		} catch (Exception e) {
-			System.err.println("ERROR [{}] - Main");
+			System.err.println("ERROR [{}] - Main.condiguraLookAndFeel() {}");
 		}
+		
+	}
+
+	
+	/**
+	 * Inicia a tela principal
+	 */
+	private static void initGame() {
+		
+		SwingUtilities.invokeLater(new Runnable() {
+			@Override
+			public void run() {
+				new App().setVisible(true);
+			}
+		});
+		
 	}
 
 }
