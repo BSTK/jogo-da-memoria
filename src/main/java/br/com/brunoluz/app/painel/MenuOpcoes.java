@@ -2,15 +2,14 @@ package br.com.brunoluz.app.painel;
 
 import java.awt.Color;
 import java.awt.Cursor;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
+
+import br.com.brunoluz.app.botoes.EventoClickBotaoNivel;
 
 public class MenuOpcoes extends JPanel {
 
@@ -77,7 +76,6 @@ public class MenuOpcoes extends JPanel {
 		
 		add(new JLabel(new ImageIcon(getClass().getClassLoader().getResource("icones/background/background.png")), SwingConstants.LEFT));
 		
-		
 	}
 	
 	
@@ -86,32 +84,9 @@ public class MenuOpcoes extends JPanel {
 	 */
 	private void eventosComponentes() {
 		
-		buttonNivelFacil.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(getParent(), "Botão " + ((JButton) e.getSource()).getText());
-			}
-			
-		});
-		
-		buttonNivelMedio.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(getParent(), "Botão " + ((JButton) e.getSource()).getText());
-			}
-			
-		});
-
-		buttonNivelDificil.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(getParent(), "Botão " + ((JButton) e.getSource()).getText());
-			}
-			
-		});
+		buttonNivelFacil.addActionListener(new EventoClickBotaoNivel());
+		buttonNivelMedio.addActionListener(new EventoClickBotaoNivel());
+		buttonNivelDificil.addActionListener(new EventoClickBotaoNivel());
 		
 		buttonNivelFacil.setCursor(new Cursor(Cursor.HAND_CURSOR));
 		buttonNivelMedio.setCursor(new Cursor(Cursor.HAND_CURSOR));
