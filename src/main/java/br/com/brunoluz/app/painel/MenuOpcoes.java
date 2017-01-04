@@ -18,9 +18,9 @@ public class MenuOpcoes extends JPanel {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private JButton buttonNivelFacil;
-	private JButton buttonNivelMedio;
-	private JButton buttonNivelDificil;
+	private JButton botaoNivelFacil;
+	private JButton botaoNivelMedio;
+	private JButton botaoNivelDificil;
 	
 	
 	/**
@@ -32,7 +32,6 @@ public class MenuOpcoes extends JPanel {
 		configuraComponentes();
 		eventosComponentes();
 		adicionaComponentes();
-		
 	}
 	
 	
@@ -50,9 +49,9 @@ public class MenuOpcoes extends JPanel {
 	 */
 	private void iniciaComponentes() {
 	
-		buttonNivelFacil = new JButton("Nível Facil");
-		buttonNivelMedio = new JButton("Nível Médio");
-		buttonNivelDificil = new JButton("Nível Dificil");
+		botaoNivelFacil = new JButton("Nível Facil");
+		botaoNivelMedio = new JButton("Nível Médio");
+		botaoNivelDificil = new JButton("Nível Dificil");
 		
 	}
 	
@@ -70,9 +69,9 @@ public class MenuOpcoes extends JPanel {
 	 */
 	private void adicionaComponentes() {
 		
-		add(buttonNivelFacil);
-		add(buttonNivelMedio);
-		add(buttonNivelDificil);
+		add(botaoNivelFacil);
+		add(botaoNivelMedio);
+		add(botaoNivelDificil);
 		
 		add(new JLabel(new ImageIcon(getClass().getClassLoader().getResource("icones/background/background.png")), SwingConstants.LEFT));
 		
@@ -84,13 +83,13 @@ public class MenuOpcoes extends JPanel {
 	 */
 	private void eventosComponentes() {
 		
-		buttonNivelFacil.addActionListener(new EventoClickBotaoNivel());
-		buttonNivelMedio.addActionListener(new EventoClickBotaoNivel());
-		buttonNivelDificil.addActionListener(new EventoClickBotaoNivel());
+		botaoNivelFacil.addActionListener(new EventoClickBotaoNivel());
+		botaoNivelMedio.addActionListener(new EventoClickBotaoNivel());
+		botaoNivelDificil.addActionListener(new EventoClickBotaoNivel());
 		
-		buttonNivelFacil.setCursor(new Cursor(Cursor.HAND_CURSOR));
-		buttonNivelMedio.setCursor(new Cursor(Cursor.HAND_CURSOR));
-		buttonNivelDificil.setCursor(new Cursor(Cursor.HAND_CURSOR));
+		botaoNivelFacil.setCursor(new Cursor(Cursor.HAND_CURSOR));
+		botaoNivelMedio.setCursor(new Cursor(Cursor.HAND_CURSOR));
+		botaoNivelDificil.setCursor(new Cursor(Cursor.HAND_CURSOR));
 		
 	}
 	
