@@ -19,6 +19,7 @@ public class Menu extends JFrame {
 	 */
 	public Menu() {
 		super("Jogo da memória");
+		setName("frameMenu");
 		setBounds(new Rectangle(500, 500));
 		setResizable(false);
 		add(new MenuOpcoes());

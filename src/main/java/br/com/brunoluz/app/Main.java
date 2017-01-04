@@ -7,8 +7,6 @@ import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
 import javax.swing.UnsupportedLookAndFeelException;
 
-import br.com.brunoluz.app.telas.Menu;
-
 public class Main {
 
 	/**
@@ -56,7 +54,7 @@ public class Main {
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {
-				new Menu().setVisible(true);
+				new App().setVisible(true);
 			}
 		});
 		

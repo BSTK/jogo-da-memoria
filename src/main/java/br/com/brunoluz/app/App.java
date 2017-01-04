@@ -2,14 +2,15 @@ package br.com.brunoluz.app;
 
 import java.awt.Rectangle;
 
-import javax.swing.ImageIcon;
+import javax.swing.GroupLayout;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
 
+import br.com.brunoluz.app.botoes.BotaoTabuleiro;
 import br.com.brunoluz.app.painel.Tabuleiro;
+import br.com.brunoluz.util.GrupoLayout;
+import br.com.brunoluz.util.PainelComponente;
 
-public class App extends JFrame {
+public class App extends JFrame implements PainelComponente {
 
 	
 	/**
@@ -18,13 +19,20 @@ public class App extends JFrame {
 	private static final long serialVersionUID = 1L;
 	
 	
+	private GroupLayout groupLayout;
+	private Tabuleiro tabuleiro;
+	
+	private final int FACIL = 8;
+	private final int MEDIO = 24;
+	private final int DIFICIL = 32;
+	
+	
 	/** 
 	 * App
 	 */
 	public App() {
 		super("Jogo da memória");
 		configuracoes();
-		adicionaComponentes();
 	}
 	
 	
@@ -32,23 +40,51 @@ public class App extends JFrame {
 	 * configuracoes
 	 */
 	private void configuracoes() {
+		
 		setBounds(new Rectangle(600, 600));
-		setUndecorated(true);
 		setExtendedState(JFrame.MAXIMIZED_BOTH);
-		
-		JLabel jLabel = new JLabel(new ImageIcon(getClass().getClassLoader().getResource("icones/background/background.png")), SwingConstants.LEFT);
-
-		setContentPane(jLabel);
-		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		iniciaComponentes();
+		configuraComponentes();
+		adicionaComponentes();
+		eventosComponentes();
+		
+		pack();
+		
 	}
-	
-	
-	/**
-	 * Adiciona componentes ao JFrame
-	 */
-	private void adicionaComponentes() {
-		add(new Tabuleiro());
+
+
+	@Override
+	public void iniciaComponentes() {
+		
+		groupLayout = new GroupLayout(getContentPane());
+		tabuleiro = new Tabuleiro();
 	}
+
+
+	@Override
+	public void configuraComponentes() {
+		
+		groupLayout.setVerticalGroup(GrupoLayout.criarParallelGroup(groupLayout, tabuleiro));
+		groupLayout.setHorizontalGroup(GrupoLayout.criarParallelGroup(groupLayout, tabuleiro));
+		
+		for (int i = 0; i < DIFICIL; i++) {
+			tabuleiro.add(new BotaoTabuleiro());
+		}
+		
+	}
+
+
+	@Override
+	public void adicionaComponentes() {
+		
+		add(tabuleiro);
+		setLayout(groupLayout);
+	}
+
+
+	@Override
+	public void eventosComponentes() {}
 	
 }

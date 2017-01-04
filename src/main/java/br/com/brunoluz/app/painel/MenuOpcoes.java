@@ -27,6 +27,7 @@ public class MenuOpcoes extends JPanel {
 	 * Tabuleiro
 	 */
 	public MenuOpcoes() {
+		setName("frameMenu");
 		configuracoes();
 		iniciaComponentes();
 		configuraComponentes();
