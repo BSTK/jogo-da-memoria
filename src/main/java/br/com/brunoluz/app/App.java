@@ -1,8 +1,11 @@
 package br.com.brunoluz.app;
 
+import java.awt.Color;
+import java.awt.Insets;
 import java.awt.Rectangle;
 
 import javax.swing.GroupLayout;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 import br.com.brunoluz.app.botoes.BotaoTabuleiro;
@@ -22,7 +25,7 @@ public class App extends JFrame implements PainelComponente {
 	private GroupLayout groupLayout;
 	private Tabuleiro tabuleiro;
 	
-	private final int FACIL = 8;
+	private final int FACIL = 16;
 	private final int MEDIO = 24;
 	private final int DIFICIL = 32;
 	
@@ -69,10 +72,6 @@ public class App extends JFrame implements PainelComponente {
 		groupLayout.setVerticalGroup(GrupoLayout.criarParallelGroup(groupLayout, tabuleiro));
 		groupLayout.setHorizontalGroup(GrupoLayout.criarParallelGroup(groupLayout, tabuleiro));
 		
-		for (int i = 0; i < DIFICIL; i++) {
-			tabuleiro.add(new BotaoTabuleiro());
-		}
-		
 	}
 
 
@@ -81,6 +80,10 @@ public class App extends JFrame implements PainelComponente {
 		
 		add(tabuleiro);
 		setLayout(groupLayout);
+
+		for (int i = 0; i < DIFICIL; i++) {
+			tabuleiro.add(new BotaoTabuleiro());
+		}
 	}
 
 
