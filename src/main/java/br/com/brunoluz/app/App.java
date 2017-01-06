@@ -1,18 +1,15 @@
 package br.com.brunoluz.app;
 
-import java.awt.Color;
-import java.awt.Insets;
 import java.awt.Rectangle;
 
 import javax.swing.GroupLayout;
-import javax.swing.JButton;
 import javax.swing.JFrame;
 
-import br.com.brunoluz.app.botoes.BotaoTabuleiro;
 import br.com.brunoluz.app.painel.Tabuleiro;
 import br.com.brunoluz.util.GrupoLayout;
 import br.com.brunoluz.util.PainelComponente;
 
+@SuppressWarnings("unused")
 public class App extends JFrame implements PainelComponente {
 
 	

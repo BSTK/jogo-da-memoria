@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 
+@SuppressWarnings("unused")
 public class EventoClickBotaoNivel implements ActionListener {
 	
 	static int quantidadeClique = 0;
@@ -17,7 +18,7 @@ public class EventoClickBotaoNivel implements ActionListener {
 		
 		quantidadeClique = (quantidadeClique < 2) ? quantidadeClique + 1 : 1;
 
-		if (quantidadeClique == 1) 
+		if (quantidadeClique == 1)
 			botaoClicadoAtual = ((JButton) event.getSource());
 			
 		if (quantidadeClique == 2) {
