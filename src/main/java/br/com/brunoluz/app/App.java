@@ -62,7 +62,7 @@ public class App extends JFrame implements PainelComponente {
 	public void iniciaComponentes() {
 		
 		groupLayout = new GroupLayout(getContentPane());
-		tabuleiro = new Tabuleiro();
+		tabuleiro = new Tabuleiro(DIFICIL);
 	}
 
 
@@ -81,9 +81,6 @@ public class App extends JFrame implements PainelComponente {
 		add(tabuleiro);
 		setLayout(groupLayout);
 
-		for (int i = 0; i < DIFICIL; i++) {
-			tabuleiro.add(new BotaoTabuleiro());
-		}
 	}
 
 

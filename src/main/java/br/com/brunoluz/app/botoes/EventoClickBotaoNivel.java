@@ -25,17 +25,6 @@ public class EventoClickBotaoNivel implements ActionListener {
 			botaoClicadoAtual = ((JButton) event.getSource());
 		}
 		
-		System.out.println("Atual " + nomeIcone(botaoClicadoAtual));
-		System.out.println("Anterior " + nomeIcone(botaoClicadoAnterior));
-		
-	}
-	
-	
-	/**
-	 * mostarClique
-	 */
-	private void mostarClique() {
-		System.out.println("Atual : " + quantidadeClique);
 	}
 	
 	

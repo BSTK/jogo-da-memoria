@@ -24,7 +24,7 @@ public class BotaoTabuleiro extends JButton {
 	/**
 	 * BotaoTabuleiro
 	 */
-	public BotaoTabuleiro() {
+	public BotaoTabuleiro(String icone) {
 
 		setBackground(Color.WHITE);
 		
@@ -37,7 +37,7 @@ public class BotaoTabuleiro extends JButton {
 		
 		setCursor(new Cursor(Cursor.HAND_CURSOR));
 		
-		setIcon(new ImageIcon(getClass().getResource(String.format("%s%s%s", PATH_ICONES, MapaBotoes.get(random.nextInt(50)), EXTENSAO))));
+		setIcon(new ImageIcon(getClass().getResource(String.format("%s%s%s", PATH_ICONES, icone, EXTENSAO))));
 		
 		addActionListener(new EventoClickBotaoNivel());
 

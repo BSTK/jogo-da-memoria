@@ -72,5 +72,15 @@ public class MapaBotoes {
 	public static String get(int key) {
 		return mapa.get(key);
 	}
+	
+	
+	/**
+	 * getMapa
+	 * @return
+	 */
+	public static Map<Integer, String> getMapa() {
+		return mapa;
+	}
+	
 
 }
