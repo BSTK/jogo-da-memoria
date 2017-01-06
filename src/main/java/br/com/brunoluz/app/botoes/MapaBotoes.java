@@ -11,13 +11,16 @@ import java.util.function.Consumer;
 
 public class MapaBotoes {
 	
+	private final static String PATH_ICONES = "/icones/botoes/";
+	private final static String ICONE_ESCONDIDO = "icone-escondido.png";
+	
 	private static Map<Integer, String> mapa = new HashMap<Integer, String>();
 	
 	static {
 		
 		try {
 			
-			Files.list(Paths.get(MapaBotoes.class.getResource("/icones/botoes/").toURI())).forEach(new Consumer<Path>() {
+			Files.list(Paths.get(MapaBotoes.class.getResource(PATH_ICONES).toURI())).forEach(new Consumer<Path>() {
 				
 				int contador = 0;
 				
@@ -25,7 +28,7 @@ public class MapaBotoes {
 				public void accept(Path t) {
 					
 					String icone = String.valueOf(t.getFileName()); 
-					if (!"icone-escondido.png".equals(icone)) {
+					if (!ICONE_ESCONDIDO.equals(icone)) {
 						mapa.put(contador , icone);
 					}
 					
