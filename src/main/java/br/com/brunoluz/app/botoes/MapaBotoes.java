@@ -1,5 +1,8 @@
 package br.com.brunoluz.app.botoes;
 
+import static br.com.brunoluz.util.Constantes.ICONE_ESCONDIDO;
+import static br.com.brunoluz.util.Constantes.PATH_ICONES;
+
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
@@ -10,9 +13,6 @@ import java.util.Map;
 import java.util.function.Consumer;
 
 public class MapaBotoes {
-	
-	private final static String PATH_ICONES = "/icones/botoes/";
-	private final static String ICONE_ESCONDIDO = "icone-escondido.png";
 	
 	private static Map<Integer, String> mapa = new HashMap<Integer, String>();
 	

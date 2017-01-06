@@ -1,5 +1,7 @@
 package br.com.brunoluz.app.botoes;
 
+import static br.com.brunoluz.util.Constantes.PATH_ICONES;
+
 import java.awt.Color;
 import java.awt.Cursor;
 
@@ -12,8 +14,6 @@ public class BotaoTabuleiro extends JButton {
 	 * serialVersionUID
 	 */
 	private static final long serialVersionUID = 1L;
-	
-	private static final String PATH_ICONES = "/icones/botoes/";
 	
 	
 	/**
