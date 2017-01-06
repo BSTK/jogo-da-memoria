@@ -2,7 +2,6 @@ package br.com.brunoluz.app.botoes;
 
 import java.awt.Color;
 import java.awt.Cursor;
-import java.util.Random;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -14,11 +13,7 @@ public class BotaoTabuleiro extends JButton {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private static final String EXTENSAO = ".png";
-	
 	private static final String PATH_ICONES = "/icones/botoes/";
-	
-	private Random random = new Random();
 	
 	
 	/**
@@ -37,7 +32,7 @@ public class BotaoTabuleiro extends JButton {
 		
 		setCursor(new Cursor(Cursor.HAND_CURSOR));
 		
-		setIcon(new ImageIcon(getClass().getResource(String.format("%s%s%s", PATH_ICONES, icone, EXTENSAO))));
+		setIcon(new ImageIcon(getClass().getResource(String.format("%s%s", PATH_ICONES, icone))));
 		
 		addActionListener(new EventoClickBotaoNivel());
 
