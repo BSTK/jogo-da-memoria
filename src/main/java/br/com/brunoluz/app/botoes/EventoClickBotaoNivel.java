@@ -7,15 +7,15 @@ import javax.swing.JButton;
 
 public class EventoClickBotaoNivel implements ActionListener {
 	
+	static int quantidadeClique = 0;
 	private JButton botaoClicadoAnterior;
 	private JButton botaoClicadoAtual;
 	
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		
-		botaoClicadoAtual = (JButton) event.getSource();
-		botaoClicadoAnterior = (botaoClicadoAnterior == null) ? botaoClicadoAtual : botaoClicadoAnterior;
-		
+		quantidadeClique = (quantidadeClique < 2) ? quantidadeClique + 1 : 1;
+
 		mostarClique();
 	}
 	
@@ -25,8 +25,10 @@ public class EventoClickBotaoNivel implements ActionListener {
 	 */
 	private void mostarClique() {
 		
-		if (botaoClicadoAnterior != null) System.out.println("Anterior : " + nomeIcone(botaoClicadoAnterior));
-		if (botaoClicadoAtual != null) System.out.println("Atual : " + nomeIcone(botaoClicadoAtual));
+		System.out.println("Atual : " + quantidadeClique);
+		
+		/*System.out.println("Anterior : " + nomeIcone(botaoClicadoAnterior));
+		System.out.println("Atual : " + nomeIcone(botaoClicadoAtual));*/
 		
 	}
 	
