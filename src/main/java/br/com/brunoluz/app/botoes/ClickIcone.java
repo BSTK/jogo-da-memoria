@@ -11,7 +11,8 @@ public abstract class ClickIcone extends MouseAdapter {
 	
 	/**
 	 * mouseClicked
-	 * @param e
+	 * @param event
+	 * @param visivel
 	 */
 	public void mouseClicked(MouseEvent event, Boolean visivel) {
 	
@@ -20,14 +21,8 @@ public abstract class ClickIcone extends MouseAdapter {
 		JLabel iconeTabuleiro = (JLabel) quadradoTabuleiro.getComponent(0);
 		JLabel iconeNaoEncontrado = (JLabel) quadradoTabuleiro.getComponent(1);
 		
-		if (visivel) {
-			iconeTabuleiro.setVisible(!visivel);
-			iconeNaoEncontrado.setVisible(visivel);
-		}
-		else {
-			iconeTabuleiro.setVisible(!visivel);
-			iconeNaoEncontrado.setVisible(visivel);
-		}
+		iconeTabuleiro.setVisible(!visivel);
+		iconeNaoEncontrado.setVisible(visivel);
 		
 	}
 	
