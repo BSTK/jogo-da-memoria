@@ -34,7 +34,7 @@ public class BotaoTabuleiro extends JButton {
 		
 		setIcon(new ImageIcon(getClass().getResource(String.format("%s%s", PATH_ICONES, icone))));
 		
-		addActionListener(new EventoClickBotaoNivel());
+		addActionListener(new ClickBotaoNivel());
 
 	}
 

@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 @SuppressWarnings("unused")
-public class EventoClickBotaoNivel implements ActionListener {
+public class ClickBotaoNivel implements ActionListener {
 	
 	static int quantidadeClique = 0;
 	static JButton botaoClicadoAtual;

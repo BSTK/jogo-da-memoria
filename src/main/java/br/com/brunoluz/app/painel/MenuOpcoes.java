@@ -9,7 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
-import br.com.brunoluz.app.botoes.EventoClickBotaoNivel;
+import br.com.brunoluz.app.botoes.ClickBotaoNivel;
 
 public class MenuOpcoes extends JPanel {
 
@@ -84,9 +84,9 @@ public class MenuOpcoes extends JPanel {
 	 */
 	private void eventosComponentes() {
 		
-		botaoNivelFacil.addActionListener(new EventoClickBotaoNivel());
-		botaoNivelMedio.addActionListener(new EventoClickBotaoNivel());
-		botaoNivelDificil.addActionListener(new EventoClickBotaoNivel());
+		botaoNivelFacil.addActionListener(new ClickBotaoNivel());
+		botaoNivelMedio.addActionListener(new ClickBotaoNivel());
+		botaoNivelDificil.addActionListener(new ClickBotaoNivel());
 		
 		botaoNivelFacil.setCursor(new Cursor(Cursor.HAND_CURSOR));
 		botaoNivelMedio.setCursor(new Cursor(Cursor.HAND_CURSOR));
