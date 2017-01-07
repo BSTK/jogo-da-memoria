@@ -21,7 +21,7 @@ public class ClickBotaoNivel implements ActionListener {
 		if (quantidadeClique == 1)
 			botaoClicadoAtual = ((JButton) event.getSource());
 			
-		if (quantidadeClique == 2) {
+		if (quantidadeClique == 2) {   
 			botaoClicadoAnterior = botaoClicadoAtual;
 			botaoClicadoAtual = ((JButton) event.getSource());
 		}

@@ -47,27 +47,8 @@ public class QuadradoTabuleiro extends JPanel {
 	 * eventos
 	 */
 	private void eventos() {
-		
 		iconeTabuleiro.addMouseListener(new ClickIconeTabuleiro());
 		iconeNaoEncontrado.addMouseListener(new ClickIconeNaoEncontrado());
-		
-		/*iconeTabuleiro.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				iconeTabuleiro.setVisible(Boolean.FALSE);
-				iconeNaoEncontrado.setVisible(Boolean.TRUE);
-			}
-		});
-		
-		iconeNaoEncontrado.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				iconeTabuleiro.setVisible(Boolean.TRUE);
-				iconeNaoEncontrado.setVisible(Boolean.FALSE);
-				
-			}
-		});*/
-		
 	}
 
 }
