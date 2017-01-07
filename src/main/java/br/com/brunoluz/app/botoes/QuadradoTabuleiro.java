@@ -2,8 +2,6 @@ package br.com.brunoluz.app.botoes;
 
 import java.awt.Color;
 import java.awt.Cursor;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
