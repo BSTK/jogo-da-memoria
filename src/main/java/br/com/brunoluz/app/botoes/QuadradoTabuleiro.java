@@ -24,7 +24,6 @@ public class QuadradoTabuleiro extends JPanel {
 	 */
 	public QuadradoTabuleiro(String icone) {
 		
-		setName("QuadradoTabuleiro");
 		setBackground(Color.WHITE);
 		
 		iconeTabuleiro.setIcon(Icone.comImagem(icone));
