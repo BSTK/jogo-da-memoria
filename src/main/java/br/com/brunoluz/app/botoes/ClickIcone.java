@@ -20,6 +20,8 @@ public abstract class ClickIcone extends MouseAdapter {
 	 */
 	private final int ICONE_NAO_ENCONTRADO = 1;
 	
+	public static int quantidadeCliques = 0;
+	
 	
 	/**
 	 * mouseClicked
@@ -28,6 +30,8 @@ public abstract class ClickIcone extends MouseAdapter {
 	 */
 	public void mouseClicked(MouseEvent event, Boolean visivel) {
 	
+		quantidadeCliques++;
+		
 		JPanel quadradoTabuleiro = (JPanel) event.getComponent().getParent();
 		
 		JLabel iconeTabuleiro = (JLabel) quadradoTabuleiro.getComponent(ICONE_TABULEIRO);
@@ -35,6 +39,9 @@ public abstract class ClickIcone extends MouseAdapter {
 		
 		iconeTabuleiro.setVisible(!visivel);
 		iconeNaoEncontrado.setVisible(visivel);
+			
+		if (quantidadeCliques == 1)
+			quantidadeCliques = 0;
 		
 	}
 	
