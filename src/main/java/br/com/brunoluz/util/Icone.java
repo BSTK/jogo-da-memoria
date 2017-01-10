@@ -35,8 +35,20 @@ public class Icone {
 	 * @param botao2
 	 * @return
 	 */
-	public static boolean iguais(JLabel botao1, JLabel botao2) {
+	public static boolean mesmaImagem(JLabel botao1, JLabel botao2) {
 		return nomeIcone(botao1).equals(nomeIcone(botao2));
+	}
+	
+
+	
+	/**
+	 * mesmoObjeto
+	 * @param botao1
+	 * @param botao2
+	 * @return
+	 */
+	public static boolean mesmoObjeto(JLabel botao1, JLabel botao2) {
+		return botao1.equals(botao2);
 	}
 	
 	

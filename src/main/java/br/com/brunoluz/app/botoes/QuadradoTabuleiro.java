@@ -1,6 +1,7 @@
 package br.com.brunoluz.app.botoes;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Cursor;
 
 import javax.swing.JLabel;
@@ -57,6 +58,27 @@ public class QuadradoTabuleiro extends JPanel {
 		
 		icone.addMouseListener(new ClickIcone());
 		
+	}
+	
+	
+	
+	/**
+	 * finalizado
+	 * @return
+	 */
+	public boolean finalizado() {
+		
+		boolean finalizado = false;
+		
+		for (Component component : getComponents()) {
+			JLabel label = (JLabel) component;
+			if (label.isEnabled())
+				break;
+			else 
+				finalizado = true;
+		}
+		
+		return finalizado;
 	}
 
 }
