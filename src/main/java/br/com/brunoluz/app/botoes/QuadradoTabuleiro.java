@@ -15,27 +15,32 @@ public class QuadradoTabuleiro extends JPanel {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private JLabel iconeTabuleiro = new JLabel();
-	private JLabel iconeNaoEncontrado = new JLabel();
+	/// private JLabel iconeTabuleiro = new JLabel();
+	/// private JLabel iconeNaoEncontrado = new JLabel();
 
+	private JLabel icone = new JLabel();
 	
 	/**
 	 * QuadradoTabuleiro
 	 */
-	public QuadradoTabuleiro(String icone) {
+	public QuadradoTabuleiro(String imagem) {
 		
 		setBackground(Color.WHITE);
 		
-		iconeTabuleiro.setIcon(Icone.comImagem(icone));
-		iconeTabuleiro.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		iconeTabuleiro.setVisible(Boolean.FALSE);
+		/// iconeTabuleiro.setIcon(Icone.comImagem(imagem));
+		/// iconeTabuleiro.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		/// iconeTabuleiro.setVisible(Boolean.TRUE);
 		
-		iconeNaoEncontrado.setIcon(Icone.naoEncontrado());
-		iconeNaoEncontrado.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		iconeNaoEncontrado.setVisible(Boolean.TRUE);
+		/// iconeNaoEncontrado.setIcon(Icone.naoEncontrado());
+		/// iconeNaoEncontrado.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		/// iconeNaoEncontrado.setVisible(Boolean.TRUE);
 		
-		add(iconeTabuleiro);
-		add(iconeNaoEncontrado);
+		/// add(iconeTabuleiro);
+		/// add(iconeNaoEncontrado);	
+		
+		icone.setIcon(Icone.comImagem(imagem));
+		icone.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		add(icone);
 		
 		eventos();
 		
@@ -46,8 +51,12 @@ public class QuadradoTabuleiro extends JPanel {
 	 * eventos
 	 */
 	private void eventos() {
-		iconeTabuleiro.addMouseListener(new ClickIconeTabuleiro());
-		iconeNaoEncontrado.addMouseListener(new ClickIconeNaoEncontrado());
+		
+		/// iconeTabuleiro.addMouseListener(new ClickIcone());
+		/// iconeNaoEncontrado.addMouseListener(new ClickIcone());
+		
+		icone.addMouseListener(new ClickIcone());
+		
 	}
 
 }
