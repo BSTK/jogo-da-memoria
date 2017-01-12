@@ -34,6 +34,7 @@ public class ClickIcone extends MouseAdapter {
 			}
 				
 			if (quantidadeCliques == 2) {
+				
 				iconeSegundoClique = iconeClicado;
 				System.out.println("Clique 2");
 				
@@ -47,11 +48,11 @@ public class ClickIcone extends MouseAdapter {
 				
 				quantidadeCliques = 0;
 				
-				if (quadradoTabuleiro.finalizado())
-					JOptionPane.showMessageDialog(null, "Jogo Finalizado !!");
 			}
-			
 		}
+		
+		if (quadradoTabuleiro.finalizado())
+			JOptionPane.showMessageDialog(null, "Jogo Finalizado !!");
 		
 	}
 	

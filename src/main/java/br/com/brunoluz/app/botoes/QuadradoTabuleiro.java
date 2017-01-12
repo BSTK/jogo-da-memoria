@@ -1,12 +1,12 @@
 package br.com.brunoluz.app.botoes;
 
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Cursor;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import br.com.brunoluz.app.painel.Tabuleiro;
 import br.com.brunoluz.util.Icone;
 
 public class QuadradoTabuleiro extends JPanel {
@@ -68,15 +68,19 @@ public class QuadradoTabuleiro extends JPanel {
 	 */
 	public boolean finalizado() {
 		
+		
+		Tabuleiro tabuleiro = (Tabuleiro) getParent();
+		
 		boolean finalizado = false;
 		
-		for (Component component : getComponents()) {
-			JLabel label = (JLabel) component;
-			if (label.isEnabled())
-				break;
+		/*for (Component c : tabuleiro.getComponents()) {
+			QuadradoTabuleiro q = (QuadradoTabuleiro) c;
+			if (label.isEnabled()) {
+				return false;
+			}
 			else 
 				finalizado = true;
-		}
+		}*/
 		
 		return finalizado;
 	}
